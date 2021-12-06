@@ -12,7 +12,7 @@ const {
 } = require('./obisParser');
 
 function Parser(encodedMBusPackage) {
-    try {
+    //try {
         this._offset = 0;
 
         this._encodedMBusPackage = encodedMBusPackage
@@ -111,8 +111,8 @@ function Parser(encodedMBusPackage) {
             }
 
         }
-    } catch (err) {
-        return {type: "parser", data: "failed to parse" };
+    //} catch (err) {
+    //    return {type: "parser", data: "failed to parse" };
     }
 }
 
