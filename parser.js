@@ -113,7 +113,7 @@ function Parser(encodedMBusPackage) {
         }
     //} catch (err) {
     //    return {type: "parser", data: "failed to parse" };
-    }
+    //}
 }
 
 Parser.prototype = {
