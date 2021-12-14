@@ -23,7 +23,7 @@ function Parser(encodedMBusPackage) {
 
         let frameFormatType = this._mbusPackageBuffer.readUInt8(1) & 0xF0;
         let validFrameFormat = frameFormatType == 0xA0;
-        let messageSize = ((this._mbusPackageBuffer.readUInt8(1) & 0x0F) << 8) | this._mbusPackageBuffer.readUInt8(1);  // Was 2, gave exception
+        let messageSize = ((this._mbusPackageBuffer.readUInt8(1) & 0x0F) << 8) | this._mbusPackageBuffer.readUInt8(2);  // Was 2, gave exception
 
 
         if (frameStart && frameEnd) {
